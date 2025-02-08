@@ -8,6 +8,7 @@ const screenWidth = window.screen.width;
 const canvasPosition = screenWidth / 2 - width / 2;
 const isMobile = window.matchMedia("(max-width: 600px)");
 const gameOverEl = document.createElement("div");
+const startScreen = document.getElementById("startScreen");
 
 // Paddle
 const paddleHeight = 10;
@@ -46,6 +47,12 @@ let computerScore = 0;
 const winningScore = 7;
 let isGameOver = true;
 let isNewGame = true;
+
+// Start Screen
+function handleStartGame() {
+  startScreen.classList.add("hidden");
+  startGame();
+}
 
 // Render Everything on Canvas
 function renderCanvas() {
@@ -238,6 +245,3 @@ function startGame() {
     canvas.style.cursor = "none";
   });
 }
-
-// On Load
-startGame();
