@@ -125,6 +125,28 @@ button:active {
   display: none;
 }
 
+.social-buttons {
+  display: flex;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.social-buttons a {
+  text-decoration: none;
+  font-size: 40px;
+  color: whitesmoke;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-buttons a:hover {
+  transform: scale(1.2);
+  color: #171515;
+}
+
+.social-buttons a:nth-child(2):hover {
+  color: #0e76a8;
+}
+
 /* Montior and Larger */
 @media screen and (min-width: 1800px) {
   canvas,
